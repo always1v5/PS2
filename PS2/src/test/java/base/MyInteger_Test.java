@@ -10,25 +10,58 @@ import org.junit.Test;
 
 public class MyInteger_Test {
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
+	MyInteger testNumber1 = new MyInteger(54);
+	MyInteger testNumber2 = new MyInteger(99);
+	MyInteger testNumber3 = new MyInteger(12);
+	MyInteger testNumber4 = new MyInteger(13);
+	MyInteger testNumber5 = new MyInteger(54);
+	MyInteger testNumber6 = new MyInteger(65);
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
+	
 	@Test
-	public void test() {
-		assertTrue(1==1);
+	public void test(){
+		
+		assertTrue(testNumber1.isEven());
+		assertFalse(testNumber2.isOdd());
+		assertFalse(testNumber3.isPrime());
+		
+		assertTrue(testNumber4.isEven());
+		assertFalse(testNumber5.isOdd());
+		assertFalse(testNumber6.isPrime());
+		
+		}
+	@Test
+	public void testTwo(){
+		
+		assertTrue(testNumber1.isEven(100));
+		assertTrue(testNumber2.isOdd(111));
+		assertTrue(testNumber3.isPrime(111));
+		
+		assertTrue(testNumber4.isEven(100));
+		assertTrue(testNumber5.isOdd(111));
+		assertTrue(testNumber6.isPrime(111));
 	}
-
+	@Test
+	public void testThree(){
+		
+		assertTrue(testNumber1.isEven());
+		assertFalse(testNumber5.isOdd());
+		assertFalse(testNumber2.isPrime());
+		
+	}
+	public void testFour(){
+		assertFalse(testNumber1.equals(54));
+		assertFalse(testNumber3.equals(12));
+	}
 }
+	
+	
+
+
+
+
+	
+	
+
+
+
